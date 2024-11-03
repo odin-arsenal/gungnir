@@ -5,3 +5,4 @@ main
 .vscode
 .idea
 *.thumbs
+_build/

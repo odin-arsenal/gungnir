@@ -1,4 +1,10 @@
-.PHONY: main docs
+.PHONY: docs build.project build.lib
+
+make build b:
+	@rm -rf _build
+	@mkdir -p _build
+	@make build.project
+	@make build.lib
 
 # Scan all directories with *docg and copy them to priv/documentation/src
 # Then take all the SUMMARY.md files and concatenate them in a single SUMMARY.md
@@ -25,5 +31,8 @@ docs d:
 	@rm -rf docs/
 	@cp -r priv/documentation/book docs
 
-main m:
-	@odin run main.odin -file
+build.project bp:
+	@odin build project.odin -file -out:_build/project
+
+build.lib bl:
+	@odin build lib/ -out:_build/lib

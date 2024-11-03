@@ -1,9 +1,7 @@
-package gungnir_lib
+package gungnir_tasks_version
 
-/**
-### Gungnir Constants
-These constants contains information about the version.
-*/
+/// Gungnir Constants
+/// These constants contains information about the version.
 
 /// Major version number
 VERSION_MAJOR       :: 1
@@ -28,3 +26,5 @@ RELEASE             :: VERSION + "." + VERSION_RELEASE_STRING
 COPYRIGHT           :: RELEASE + "  Copyright (C) Odin's Arsenal, Ninjas.cl"
 AUTHORS             :: "Made with ❤ by Ninjas.cl and friends."
 WEBSITE							:: "https://github.com/odin-arsenal/gungnir"
+
+

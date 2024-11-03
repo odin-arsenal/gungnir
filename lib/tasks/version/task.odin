@@ -1,8 +1,7 @@
-package gungnir_tasks
+package gungnir_tasks_version
 
 import "core:fmt"
-import g "../../"
 
-version :: proc() {
-	fmt.printfln("%s\n%s\n%s", g.COPYRIGHT, g.AUTHORS, g.WEBSITE)
+run_default_version_command :: proc() {
+	fmt.printfln("%s\n%s\n%s", COPYRIGHT, AUTHORS, WEBSITE)
 }

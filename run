@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+# This file helps executing the lib/ package
+# Run make build.lib before executing this
+# ./run args
+_build/lib $@
