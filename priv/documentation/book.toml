@@ -1,6 +1,6 @@
 [book]
-authors = ["Odin"]
+authors = ["Gungnir"]
 language = "en"
 multilingual = false
 src = "src"
-title = "Example Docs"
+title = "Gungnir Documentation"

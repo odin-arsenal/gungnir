@@ -1,3 +1,7 @@
-__pycache__
 .DS_Store
-example
+tests.bin
+main
+*.o
+.vscode
+.idea
+*.thumbs

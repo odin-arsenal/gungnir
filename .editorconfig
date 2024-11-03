@@ -1,0 +1,16 @@
+root = true
+
+[*]
+insert_final_newline = true
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+indent_size = 2
+indent_style = tab
+
+[*.{adoc, md}]
+trim_trailing_whitespace = false
+
+[Makefile]
+indent_style = tab
+indent_size = 2

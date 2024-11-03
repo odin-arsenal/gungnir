@@ -1,0 +1,5 @@
+- [About Gungnir](root/README.md)
+	- [Team](root/AUTHORS.md)
+	- [Changelog](root/CHANGELOG.md)
+	- [License](root/LICENSE.md)
+	- [How to Contribute](root/CONTRIBUTING.md)
