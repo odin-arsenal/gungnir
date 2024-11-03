@@ -1,4 +1,4 @@
-# 🪡  [Gungnir Documentation Generator](https://github.com/NinjasCL/domepunk/tree/main/tools/docs)
+# 🪡  [Gungnir Documentation Generator](https://github.com/odin-arsenal/gungnir)
 
 Code structure and organization is a matter of pride for developers.
 Clear and consistent code signifies clear and consistent thought.
@@ -54,7 +54,7 @@ Only one command per line is supported.
 
 - `/** doc-disable */`: This command will disable parsing the file.
 
-- `/** name: MyFilename */`: This command will overwrite the filename of the generated markdown file. By default _WrenDoc_ uses the following format:
+- `/** name: MyFilename */`: This command will overwrite the filename of the generated markdown file. By default _Gungnir_ uses the following format:
 
 ```python
 # e.g wren.md
