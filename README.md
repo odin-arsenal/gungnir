@@ -41,7 +41,7 @@ at a _Gungnir_-generated documentation for the `wren.odin` file.
 
 ### Config
 
-A small [configuration file](https://github.com/odin-arsenal/gungnir/blob/main/tools/docs/config.py) is provided.
+A small [configuration file](config.py) is provided.
 
 - `repo`: The base for generating header links to the source code. e.g. _"github.com/ninjascl/domepunk"_
 - `branch`: The url related to the branch in the source code. e.g. _"blob/main"_
