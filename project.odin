@@ -4,10 +4,8 @@
 package gungnir_main
 
 import "core:fmt"
-import gungnir "lib"
-import tasks "lib/tasks/version"
-
+import "lib"
 
 main :: proc() {
-	tasks.run_version_command(gungnir.COPYRIGHT, gungnir.AUTHORS, gungnir.WEBSITE)
+	lib.main()
 }
