@@ -1,5 +1,5 @@
 """
-# WrenDoc
+# Odin's Arsenal: Gungnir
 
 This is a simple documentation generator.
 The idea is to parse files and look for
@@ -8,8 +8,8 @@ markdown style comments (/** */).
 Then generate the proper .md files inside docs
 directory.
 
-- Source: https://github.com/NinjasCL/domepunk/tree/main/tools/docs
-- License:  MPL-2.0 license
+- Source: https://github.com/odin-arsenal/gungnir
+- License:  BSD-3
 - Python: 3.7
 """
 import re
