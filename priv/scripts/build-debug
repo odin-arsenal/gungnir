@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+odin build lib/ -define:env=dev -strict-style -debug -out:_build/lib $@

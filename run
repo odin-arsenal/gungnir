@@ -1,0 +1,111 @@
+#!/usr/bin/env bash
+
+# Project TaskFile
+#
+# See https://github.com/adriancooney/Taskfile
+#
+# A Taskfile is a bash (or zsh etc.) script that follows
+# a specific format. It's called Taskfile, sits in the root of your project
+# (alongside your other project files) and contains the tasks to run your project.
+#
+# Example: ./run build.debug
+#
+
+# Enables easier access to common directories
+# Usage: import "project:config"
+COLLECTIONS="-collection:project=."
+
+function test {
+	priv/scripts/test ${COLLECTIONS}
+}
+
+# Builds docs using Gungnir
+function docs {
+	echo "TODO"
+}
+
+# Init git submodules inside deps
+function deps.get {
+	echo "TODO"
+}
+
+# debug build for LLDB usage
+function build.debug {
+	mkdir -p _build
+	priv/scripts/format ${COLLECTIONS}
+	priv/scripts/build-debug ${COLLECTIONS}
+}
+
+# builds project.odin file
+function build.project {
+	mkdir -p _build
+	priv/scripts/format ${COLLECTIONS}
+	priv/scripts/build-project ${COLLECTIONS}
+}
+
+# builds debug and project.odin
+function build.all {
+	rm -rf _build
+	mkdir -p _build
+	priv/scripts/format ${COLLECTIONS}
+	priv/scripts/build-debug ${COLLECTIONS}
+	priv/scripts/build-project ${COLLECTIONS}
+}
+
+# Release build without debug symbols
+function build.release {
+	rm -rf dist
+	mkdir -p dist
+	priv/scripts/format ${COLLECTIONS}
+	priv/scripts/build-release ${COLLECTIONS}
+}
+
+# Runs the project binary
+function project {
+	# This file helps executing the project.odin
+	# Run ./run build:lib before executing this
+	# ./run project args
+	_build/project $@
+}
+
+# Runs the lib package binary
+function lib {
+	# This file helps executing the lib/ package
+	# Run ./run build:lib before executing this
+	# ./run lib args
+	_build/lib $@
+}
+
+# Formats the project with odin
+# Ensure to update the collection inside hooks if more are added later
+function format {
+	priv/scripts/format ${COLLECTIONS}
+}
+
+# install format and lint hooks to git
+function hooks {
+	cp .hooks/pre-commit .git/hooks
+	cp -r .hooks/pre-commit.d .git/hooks
+}
+
+# Test the program with the version command
+function version {
+	./run build:debug
+	_build/lib --version $@
+}
+
+# prints help
+function help {
+    echo "$0 <task> <args>"
+    echo "Tasks:"
+    compgen -A function | cat -n
+}
+
+function default {
+    # Default task to execute
+    help
+}
+
+TIMEFORMAT=""
+#TIMEFORMAT="Task completed in %3lR"
+time ${@:-default}

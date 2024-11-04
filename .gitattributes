@@ -1,0 +1,13 @@
+* text=auto eol=lf
+*.o binary
+*.a binary
+*.dylib binary
+*.so binary
+*.lib binary
+*.dll binary
+*.cmd binary
+*.bat binary
+*.png binary
+*.webp binary
+*.jpg binary
+*.jpeg binary
