@@ -4,9 +4,8 @@ Who is behind this project?
 
 ## Team Members
 
-- Lead Developer: [@](https://github.com/)
+- Lead Developer: [@clsource](https://github.com/clsource)
 
 ## Special Thanks
 
-- Odin
-- Thör
+- [@gingerbill](https://github.com/gingerbill): Odin Language's creator.

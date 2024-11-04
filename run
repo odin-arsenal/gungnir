@@ -90,7 +90,7 @@ function hooks {
 
 # Test the program with the version command
 function version {
-	./run build:debug
+	./run build.debug
 	_build/lib --version $@
 }
 
@@ -106,6 +106,6 @@ function default {
     help
 }
 
-TIMEFORMAT=""
 #TIMEFORMAT="Task completed in %3lR"
+TIMEFORMAT=""
 time ${@:-default}
