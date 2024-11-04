@@ -1,5 +1,0 @@
-#!/usr/bin/env sh
-# This file helps executing the project.odin file
-# Run make build.project before executing this
-# ./project args
-_build/project $@

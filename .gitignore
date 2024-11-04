@@ -1,8 +1,0 @@
-.DS_Store
-tests.bin
-main
-*.o
-.vscode
-.idea
-*.thumbs
-_build/

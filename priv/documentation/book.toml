@@ -1,6 +1,0 @@
-[book]
-authors = ["Gungnir"]
-language = "en"
-multilingual = false
-src = "src"
-title = "Gungnir Documentation"
