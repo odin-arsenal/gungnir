@@ -91,7 +91,7 @@ function hooks {
 # Test the program with the version command
 function version {
 	./run build.debug
-	_build/lib --version $@
+	_build/lib -version $@
 }
 
 # prints help

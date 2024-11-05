@@ -48,7 +48,7 @@ VERSION             :: "Gungnir " + VERSION_STRING
 RELEASE             :: VERSION + "." + VERSION_RELEASE_STRING
 COPYRIGHT           :: RELEASE + "  Copyright (C) Odin's Arsenal, Ninjas.cl"
 AUTHORS             :: "Made with ❤ by Ninjas.cl and friends."
-WEBSITE							:: "https://github.com/odin-arsenal/draupnir"
+WEBSITE							:: "https://github.com/odin-arsenal/gungnir"
 
 /// The current environment set with -define:env=dev at build time
 ENVIRONMENT 				:: #config(env, "dev")

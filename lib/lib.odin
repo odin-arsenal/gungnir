@@ -1,3 +1,4 @@
+/// docs.ignore
 package lib_main
 
 import "core:fmt"

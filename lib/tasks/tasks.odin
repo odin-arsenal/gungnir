@@ -1,3 +1,4 @@
+/// docs.ignore
 package lib_tasks
 
 import "core:fmt"
@@ -10,7 +11,7 @@ import "version"
 
 parse_system_args :: proc() -> options.Options {
 	args: options.Options
-	flags.parse_or_exit(&args, os.args, .Unix)
+	flags.parse_or_exit(&args, os.args, .Odin)
 	return args
 }
 

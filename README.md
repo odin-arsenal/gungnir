@@ -9,8 +9,6 @@ to document `*.odin` files.
 
 This project is part of the [Odin's Arsenal](https://github.com/odin-arsenal/draupnir).
 
-
-
 ## License
 
 - BSD-3
