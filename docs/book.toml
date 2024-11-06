@@ -1,6 +1,0 @@
-[book]
-authors = ["Odin"]
-language = "en"
-multilingual = false
-src = "src"
-title = "Example Docs"
