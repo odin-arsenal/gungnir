@@ -4,6 +4,7 @@ _build/
 dist/
 lib.bin
 project.bin
+scratch_*
 
 ### Editors ###
 .vscode

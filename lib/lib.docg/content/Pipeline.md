@@ -57,7 +57,7 @@ inside `<package>.docg/api/<file>.odin.d/`.
 
 - `<file>.odin.d/<procedure>.md`: Individual page for the procedure. Used for amalgamated `<file>.odin.md` and `SUMMARY.md` creation.
 
-- `<file>.odin.d/<procedure>.json`: This is a parsed _Markdown_ with information about the procedure. It's meant to be used alongside an _IDE_ or other plugins and tools. Contains rich information that complements static inference. This is useful for creating other tools and integrations that can improve developer experience. For these file be properly created a strict _Markdown_ format must be follow. Check [Gungnir Markdown Style Guide](./) for more information.
+- `<file>.odin.d/<procedure>.json`: This is a parsed _Markdown_ with information about the procedure. It's meant to be used alongside an _IDE_ or other plugins and tools. Contains rich information that complements static inference. This is useful for creating other tools and integrations that can improve developer experience. For example if you want to convert _Markdown_ to _Asciidoc_ for usage in other backends like [Antora Docs](https://docs.antora.org/antora/latest/). For creating these, the file **must** be properly created using a strict _Markdown_ format. Check [Gungnir Markdown Style Guide](./) for more information.
 
 - `content/`: Optional. Contains custom pages that will be manually linked in `TOPICS.md` by the developer.
 
