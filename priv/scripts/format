@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# Ensure to update the collection if more are added later
+odin strip-semicolon . $@
+odin check . $@

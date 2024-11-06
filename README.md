@@ -13,7 +13,7 @@ for _Odin_ developers.
 
 ## Why Use _Gungnir_?
 
-_Gugnir_ treats documentation as a first-class citizen. Documentation must be easy to write and easy to read. _Gungnir_ empowers you to write excellent reference documentation, leveraging the power of _Markdown_ and _Odin_ to give users a bird's-eye view of the public APIs in your framework, library or package, complete with the ability to describe how APIs work together, not just in isolation. _Gungnir_ enables you to write much more than great reference documentation, though. With _Markdown_ you can write articles to allow you walk users through the big picture behind your project, giving you an opportunity to tie individual items in your project together with a cohesive story. And tutorials are a powerful step-by-step walk-through of writing a project that uses your project. They allow you to go much deeper than reference documentation or articles by giving your users a guided introduction to your project from the ground up.
+_Gungnir_ treats documentation as a first-class citizen. Documentation must be easy to write and easy to read. _Gungnir_ empowers you to write excellent reference documentation, leveraging the power of _Markdown_ and _Odin_ to give users a bird's-eye view of the public APIs in your framework, library or package, complete with the ability to describe how APIs work together, not just in isolation. _Gungnir_ enables you to write much more than great reference documentation, though. With _Markdown_ you can write articles to allow you walk users through the big picture behind your project, giving you an opportunity to tie individual items in your project together with a cohesive story. And tutorials are a powerful step-by-step walk-through of writing a project that uses your project. They allow you to go much deeper than reference documentation or articles by giving your users a guided introduction to your project from the ground up.
 
 ### Markdown
 
@@ -263,7 +263,6 @@ The presented _Roadmap_ can be modified depending on different priorities and fi
 ## License
 
 - BSD-3
-
 
 ## Credits
 

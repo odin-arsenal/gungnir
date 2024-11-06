@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+odin test test/ -define:env=test -all-packages $@
