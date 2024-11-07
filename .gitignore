@@ -1,1 +1,13 @@
+# IDE
+.idea/
+.vscode/
+
+# Odin
+_build/
+bin/
+priv/logs/
+*.o
+*.exe
+
+# Macos
 .DS_Store

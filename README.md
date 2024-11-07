@@ -221,6 +221,7 @@ foo :: proc(bar: string) -> (ok: bool) {}
 ```
 
 - [More examples can be found at Odin repository](https://github.com/odin-lang/Odin/tree/master/examples/all).
+- [Newsletter announcement](https://odin-lang.org/news/new-package-documentation/).
 
 Additionally there is the convention of [doc.odin](https://github.com/odin-lang/Odin/blob/master/core/flags/doc.odin). A file with a comment similar to [Go Doc Comments](https://tip.golang.org/doc/comment). "Doc comments" are comments that appear immediately before top-level declarations with no intervening newlines. Every exported (capitalized) name should have a doc comment.
 
