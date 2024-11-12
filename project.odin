@@ -24,6 +24,9 @@ read_project_settings :: proc() -> ini.Map {
 	if !ok {
 		fmt.panicf("Error opening project config file (%s): %s", config_file_path, err)
 	}
+
+	fmt.printfln("%s", values)
+
 	return values
 }
 
