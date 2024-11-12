@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-odin build project.odin -define:env=dev -strict-style -debug -file -out:_build/project $@

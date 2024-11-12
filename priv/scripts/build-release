@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 
-odin build lib/ -define:env=prod -warnings-as-errors -strict-style -out:bin/lib $@
-odin build project.odin -file -define:env=prod -warnings-as-errors -strict-style -out:bin/project $@
+odin build . -define:env=prod -warnings-as-errors -strict-style -out:bin/project $@

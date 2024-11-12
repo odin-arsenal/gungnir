@@ -1,4 +1,4 @@
-package lib_tasks_file
+package Tasks_File
 
 import "core:log"
 import "core:fmt"

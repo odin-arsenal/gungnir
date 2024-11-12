@@ -36,22 +36,6 @@ function build.debug {
 	priv/scripts/build-debug ${COLLECTIONS}
 }
 
-# builds project.odin file
-function build.project {
-	mkdir -p _build
-	priv/scripts/format ${COLLECTIONS}
-	priv/scripts/build-project ${COLLECTIONS}
-}
-
-# builds debug and project.odin
-function build.all {
-	rm -rf _build
-	mkdir -p _build
-	priv/scripts/format ${COLLECTIONS}
-	priv/scripts/build-debug ${COLLECTIONS}
-	priv/scripts/build-project ${COLLECTIONS}
-}
-
 # Release build without debug symbols
 function build.release {
 	rm -rf bin
@@ -68,26 +52,11 @@ function project {
 	_build/project $@
 }
 
-function project.prod {
+function project.release {
 	# This file helps executing the project.odin
 	# Run ./run build:lib before executing this
 	# ./run project.prod args
 	bin/project $@
-}
-
-# Runs the lib package binary
-function lib {
-	# This file helps executing the lib/ package
-	# Run ./run build:lib before executing this
-	# ./run lib args
-	_build/lib $@
-}
-
-function lib.prod {
-	# This file helps executing the lib/ package
-	# Run ./run build:lib before executing this
-	# ./run lib.prod args
-	bin/lib $@
 }
 
 # Formats the project with odin
@@ -105,7 +74,7 @@ function hooks {
 # Test the program with the version command
 function version {
 	./run build.debug
-	_build/lib -v $@
+	_build/project -v $@
 }
 
 # prints help
@@ -120,6 +89,6 @@ function default {
     help
 }
 
-TIMEFORMAT=""
 #TIMEFORMAT="Task completed in %3lR"
+TIMEFORMAT=""
 time ${@:-default}

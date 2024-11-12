@@ -1,4 +1,4 @@
-package config
+package Config
 
 // This file is responsible for configuring your application
 // and its dependencies.
@@ -51,7 +51,7 @@ AUTHORS             :: "Made with ❤ by Ninjas.cl and friends."
 WEBSITE				:: "https://github.com/odin-arsenal/gungnir"
 
 /// The current environment set with -define:env=dev at build time
-ENVIRONMENT 				:: #config(env, "dev")
+ENVIRONMENT 		:: #config(env, "dev")
 
 // Can be separated in different files if needed
 

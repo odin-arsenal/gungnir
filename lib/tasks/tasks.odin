@@ -1,18 +1,16 @@
-package lib_tasks
+package Tasks
 
-import "core:fmt"
 import "core:flags"
-import "core:os"
 
 // Tasks
 import "options"
 import "version"
 import "file"
 
-parse_system_args :: proc() -> options.Options {
-	args: options.Options
-	flags.parse_or_exit(&args, os.args, .Odin)
-	return args
+parse_system_args :: proc(args: []string) -> options.Options {
+	opt: options.Options
+	flags.parse_or_exit(&opt, args, .Odin)
+	return opt
 }
 
 run_task_by_options :: proc (args: options.Options) {
@@ -28,7 +26,7 @@ run_task_by_options :: proc (args: options.Options) {
 	}
 }
 
-process_tasks :: proc() {
-	args := parse_system_args()
-	run_task_by_options(args)
+// Entry point
+run :: proc(args: []string) {
+	run_task_by_options(parse_system_args(args))
 }

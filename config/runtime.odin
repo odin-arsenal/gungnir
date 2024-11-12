@@ -1,2 +1,2 @@
 // Fetch or sets Runtime variables
-package config
+package Config

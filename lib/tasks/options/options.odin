@@ -1,4 +1,4 @@
-package lib_tasks_options
+package Tasks_Options
 
 import "core:os"
 

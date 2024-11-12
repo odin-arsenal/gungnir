@@ -1,4 +1,4 @@
-package lib_tasks_version
+package Tasks_Version
 
 import "core:fmt"
 import "project:config"
