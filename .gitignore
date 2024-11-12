@@ -8,6 +8,7 @@ bin/
 priv/logs/
 *.o
 *.exe
+*.odin-doc
 
 # Macos
 .DS_Store

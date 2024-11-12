@@ -59,7 +59,7 @@ main :: proc() {
 	// Start Logger
 	log_handle := setup_logger()
 	context.logger = log.create_multi_logger(
-		log.create_console_logger(),
+		log.create_console_logger(.Debug when ODIN_DEBUG else .Info),
 		log.create_file_logger(log_handle),
 	)
 	defer os.close(log_handle)
