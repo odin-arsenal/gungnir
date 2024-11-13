@@ -6,5 +6,8 @@
 - [Nested example](nested/README.md)
     - [Sub-chapter](nested/sub-chapter.md)
 -->
+# Documentation Comments
 
-- [Example](lib.docg/Example.md)
+- [Markline Comments](lib.docg/MarklineComments.md)
+- [Markdown Comments](lib.docg/MarkdownComments.md)
+- [Symbol Comments](lib.docg/SymbolComments.md)

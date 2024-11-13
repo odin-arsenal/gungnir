@@ -119,6 +119,8 @@ parse_content :: proc(content: string, path: string = "memory") -> (ParserResult
     // Normally markdown comments are used for sections within the document.
     // Also consider implementing parsing MARK comments (MARK, FIXME, TODO)
     // Maybe translate them to: Info, Warning and Note.
+    // docs comments will generate its own file for menu creation
+    // markdown comments will only be available at the main document for the file.
     result := get_doc_comments(tree)
     
     return result, ok
