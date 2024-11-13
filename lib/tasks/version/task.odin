@@ -1,3 +1,4 @@
+/// docs.ignore
 package Tasks_Version
 
 import "core:fmt"

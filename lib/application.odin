@@ -1,3 +1,4 @@
+/// docs.ignore
 package Application
 
 import "tasks"

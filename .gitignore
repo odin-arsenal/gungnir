@@ -9,6 +9,7 @@ priv/logs/
 *.o
 *.exe
 *.odin-doc
+test.bin
 
 # Macos
 .DS_Store
