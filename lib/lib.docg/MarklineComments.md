@@ -62,7 +62,9 @@ foo :: proc() {
 }
 ```
 
-They will not be used in the _Markdown_ output, but they can be used in IDEs to help navigate the code (with proper plugins or grep). Try to avoid merging code containing `FIXME` or `TODO` comments, because they tend to be easily forgotten. If you find yourself in a situation where you really need to merge your unfinished code (we all know it happens sometimes) with these types of comments, It is highly recommended using a [`log.warn()`](https://pkg.odin-lang.org/core/log/#warn) statement instead.
+They will not be used in the _Markdown_ output, but they can be used in IDEs to help navigate the code (with proper plugins or grep). Try to avoid merging code containing `FIXME` or `TODO` comments, because they tend to be easily forgotten. If you find yourself in a situation where you really need to merge your unfinished code (we all know it happens sometimes) with these types of comments, It is highly recommended using a [`log.warn()`](https://pkg.odin-lang.org/core/log/#warn) statement instead. 
+
+A third option is the `NOTE:` markline, but is not quite as popular. Useful for comments that complements the understanding for maintainers of the code.
 
 ### Deprecation Policy
 
@@ -103,8 +105,8 @@ PersonContact :: struct {
 ///     - contact: The main contact information for this person
 Person :: struct {
     name : string,
-    lastname : string
-    contact : PersonContact
+    lastname : string,
+    contact : PersonContact,
 }
 ```
 
