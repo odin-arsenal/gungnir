@@ -19,12 +19,12 @@ This will also be available
 as a Markdown comment
 */
 
+// MARK: Answers
+
 // The following is a Documentation Comment.
 // Documentation comments are parsed for special Keywords
 // That formats how to document symbols
 // They are associated with a symbol (procedure, struct, enum, constant, field) below them
-
-// MARK: Answers
 
 /// The universal answer
 ///
