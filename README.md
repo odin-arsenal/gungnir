@@ -255,8 +255,8 @@ The presented _Roadmap_ can be modified depending on different priorities and fi
 |Item|Description|Status
 |---|---|---|
 | Implement prototype (v0.1) | Implement a Prototype in Python to test the viability of the approach. | Completed. [Download Available](https://github.com/odin-arsenal/gungnir/releases/tag/v0.1-prototype)
-| Implement v1.0.0 | Implement a command line version in Odin that takes a single file and creates a _Markdown_ document, reading the documentation comments. | In Progress.
-| _Gungnir_ Documentation Catalogues | _Gungnir_ documentation catalogues will enable richer documentation by appending articles, tutorials and extended reference docs by storing files inside a `*.docg` directory at the package level. | To be defined.
+| Implement v1.0.0 | Implement a command line version in Odin that takes a single file and creates a _Markdown_ document, reading the documentation comments. This will be saved in a file documentation catalogue. | In Progress.
+| _Gungnir_ Package Documentation Catalogues | _Gungnir_ documentation catalogues will enable richer documentation by appending articles, tutorials and extended reference docs by storing files inside a `*.docg` directory at the package level. This will be composed by file sub-catalogues.| To be defined.
 | Doctests| [Doctests](https://stackoverflow.com/a/13722080) solves the far more subtle danger of having outdated comments misleading the maintenance of the code.| To be defined.
 |_Odin Doc_ bi-directional transpiler | Take _Gungnir_ documentation comments and transpile them to _Odin Doc_ format (and reverse operation). This will enable integration with existing codebases. | To be defined.
 |Tarball Archives| Provide archiving the HTML docs in a `*.tar` file. This can be loaded in _Gungnir_ to initialize a localhost server to show the documentation inside the tarball. | To be defined.
