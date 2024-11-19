@@ -1,11 +1,12 @@
 /// docs.ignore
 // Identifies the directory as an Odin project
 // Setup settings for project wide context
-package Project
+package Gungnir_Project
 
 import "core:fmt"
 import "core:log"
 import "core:os"
+import "core:mem"
 import "core:path/filepath"
 import "core:encoding/ini"
 
@@ -24,8 +25,6 @@ read_project_settings :: proc() -> ini.Map {
 	if !ok {
 		fmt.panicf("Error opening project config file (%s): %s", config_file_path, err)
 	}
-
-	fmt.printfln("%s", values)
 
 	return values
 }
@@ -64,7 +63,30 @@ main :: proc() {
 	)
 	defer os.close(log_handle)
 
+	// Start Tracking Allocator
+	when ODIN_DEBUG {
+		track: mem.Tracking_Allocator
+		mem.tracking_allocator_init(&track, context.allocator)
+		context.allocator = mem.tracking_allocator(&track)
+
+		defer {
+			if len(track.allocation_map) > 0 {
+				log.warnf("=== %v allocations not freed: ===\n", len(track.allocation_map))
+				for _, entry in track.allocation_map {
+					log.warnf("- %v bytes @ %v\n", entry.size, entry.location)
+				}
+			}
+			if len(track.bad_free_array) > 0 {
+				log.warnf("=== %v incorrect frees: ===\n", len(track.bad_free_array))
+				for entry in track.bad_free_array {
+					log.warnf("- %p @ %v\n", entry.memory, entry.location)
+				}
+			}
+			mem.tracking_allocator_destroy(&track)
+		}
+	}
+
 	// Now we can start our application
 	log.debugf("Starting Application %s", config.VERSION)
-	app.start(os.args)
+	defer os.exit(app.start(os.args))
 }

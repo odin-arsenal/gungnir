@@ -1,4 +1,4 @@
-package Config
+package  Gungnir_Config
 
 // This file is responsible for configuring your application
 // and its dependencies.

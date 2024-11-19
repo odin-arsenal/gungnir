@@ -52,7 +52,7 @@ function project {
 	_build/project $@
 }
 
-function project.release {
+function release {
 	# This file helps executing the project.odin
 	# Run ./run build:lib before executing this
 	# ./run project.prod args

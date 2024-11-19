@@ -140,9 +140,11 @@ A simple sum procedure of two numbers.
 
 ## Declaration
 
-\```odin
+<pre>
+```odin
 sum :: proc(x: int, y: int) -> int
-\```
+```
+</pre>
 
 ## Parameters
 

@@ -1,2 +1,2 @@
 // Fetch or sets Runtime variables
-package Config
+package  Gungnir_Config
