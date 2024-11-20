@@ -1,5 +1,4 @@
 // normal comment is ignored
-#+private file
 package Gungnir_Fixture_Docs_Header
 
 /// My File
