@@ -1,3 +1,4 @@
+#+build !windows
 // normal comment is ignored
 package Gungnir_Fixture_Docs_Header
 

@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+function md.build {
+    pushd .
+    cd priv/documentation/project.docg && mdbook build
+    popd
+}
+
+function md.serve {
+    pushd .
+    cd priv/documentation/project.docg && mdbook serve
+    popd
+}
+
+function default {
+    # Default task to execute
+    # Run the project.odin main procedure
+    odin run .
+}
+
+#TIMEFORMAT="Task completed in %3lR"
+TIMEFORMAT=""
+time ${@:-default}

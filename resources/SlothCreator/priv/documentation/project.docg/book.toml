@@ -1,0 +1,17 @@
+[book]
+title = "SlothCreator"
+description = "Catalog sloths you find in nature and create new adorable virtual sloths."
+authors = ["Ninjas.cl, Apple Inc"]
+language = "en"
+multilingual = false
+src = "./docs"
+
+[output.html]
+smart-punctuation = true
+mathjax-support = false
+site-url = "https://odin-arsenal.github.io/gungnir/"
+additional-css = ["./theme/styles/theme.min.css"]
+git-repository-url = "git@github.com:odin-arsenal/gungnir.git"
+
+[output.html.code.hidelines]
+odin = "~"
