@@ -1,0 +1,1089 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>SlothCreator</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="Catalog sloths you find in nature and create new adorable virtual sloths.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="./theme/styles/theme.min.css">
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Sloth Creator</li><li class="chapter-item expanded "><a href="src/index.html"><strong aria-hidden="true">1.</strong> About</a></li><li class="chapter-item expanded "><a href="Overview.html"><strong aria-hidden="true">2.</strong> Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">Articles</li><li class="chapter-item expanded "><a href="articles/GettingStarted.html"><strong aria-hidden="true">3.</strong> Getting Started</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Package: Sloth </li><li class="chapter-item expanded "><a href="src/lib/Sloth/overview.html"><strong aria-hidden="true">4.</strong> Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">Enums</li><li class="chapter-item expanded "><a href="src/lib/Sloth/schedule.odin.d/schedule.html"><strong aria-hidden="true">5.</strong> Event</a></li><li class="chapter-item expanded "><a href="src/lib/Sloth/color.odin.d/color.html"><strong aria-hidden="true">6.</strong> Color</a></li><li class="chapter-item expanded "><a href="src/lib/Sloth/power.odin.d/power.html"><strong aria-hidden="true">7.</strong> Power</a></li><li class="chapter-item expanded "><a href="src/lib/Sloth/activity.odin.d/speed.html"><strong aria-hidden="true">8.</strong> Speed</a></li><li class="chapter-item expanded "><a href="src/lib/Sloth/food.odin.d/slothfoodenum.html"><strong aria-hidden="true">9.</strong> SlothFoodEnum</a></li><li class="chapter-item expanded affix "><li class="part-title">Structs</li><li class="chapter-item expanded "><a href="src/lib/Sloth/food.odin.d/food.html"><strong aria-hidden="true">10.</strong> Food</a></li><li class="chapter-item expanded "><a href="src/lib/Sloth/habitat.odin.d/habitat.html"><strong aria-hidden="true">11.</strong> Habitat</a></li><li class="chapter-item expanded "><a href="src/lib/Sloth/schedule.odin.d/schedule.html"><strong aria-hidden="true">12.</strong> Schedule</a></li><li class="chapter-item expanded "><a href="src/lib/Sloth/sloth.odin.d/sloth.html"><strong aria-hidden="true">13.</strong> Sloth</a></li><li class="chapter-item expanded affix "><li class="part-title">Constants</li><li class="chapter-item expanded "><a href="src/lib/Sloth/food.odin.d/slothfood.html"><strong aria-hidden="true">14.</strong> SlothFood</a></li><li class="chapter-item expanded affix "><li class="part-title">Procedures</li><li class="chapter-item expanded "><a href="src/lib/Sloth/food.odin.d/init_food-04e4b06c0.html"><strong aria-hidden="true">15.</strong> init_food/2</a></li><li class="chapter-item expanded "><a href="src/lib/Sloth/schedule.odin.d/init_schedule-6b4d71c7d.html"><strong aria-hidden="true">16.</strong> init_schedule/1</a></li><li class="chapter-item expanded "><a href="src/lib/Sloth/habitat.odin.d/init_habitat-2cc9bae26.html"><strong aria-hidden="true">17.</strong> init_habitat/2</a></li><li class="chapter-item expanded "><a href="src/lib/Sloth/habitat.odin.d/habitat_comfort_level-db724c769.html"><strong aria-hidden="true">18.</strong> habitat_comfort_level/2</a></li><li class="chapter-item expanded "><a href="src/lib/Sloth/sloth.odin.d/init_sloth-d710023bf.html"><strong aria-hidden="true">19.</strong> init_sloth/3</a></li><li class="chapter-item expanded "><a href="src/lib/Sloth/sloth.odin.d/sloth_eat-3e351e1ca.html"><strong aria-hidden="true">20.</strong> sloth_eat/3</a></li><li class="chapter-item expanded "><a href="src/lib/Sloth/sloth.odin.d/sloth_eat_food-949942c18.html"><strong aria-hidden="true">21.</strong> sloth_eat_food/3</a></li><li class="chapter-item expanded "><a href="src/lib/Sloth/sloth.odin.d/sloth_eat_default_food-95c5c58aa.html"><strong aria-hidden="true">22.</strong> sloth_eat_default_food/3</a></li><li class="chapter-item expanded "><a href="src/lib/Sloth/sloth.odin.d/sloth_sleep-a454e1238.html"><strong aria-hidden="true">23.</strong> sloth_sleep/3</a></li><li class="chapter-item expanded "><a href="src/lib/Sloth/sloth.odin.d/sloth_perform-c388865f.html"><strong aria-hidden="true">24.</strong> sloth_perform/3</a></li><li class="chapter-item expanded affix "><li class="spacer"></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">SlothCreator</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="git@github.com:odin-arsenal/gungnir.git" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="slothcreator-building-documentation-with-gungnir-in-odin"><a class="header" href="#slothcreator-building-documentation-with-gungnir-in-odin">SlothCreator: Building Documentation with <a href="https://github.com/odin-arsenal/gungnir">Gungnir</a> in <a href="https://odin-lang.org">Odin</a></a></h1>
+<p>Build <em>Gungnir</em> documentation for an <a href="https://odin-lang.org">Odin</a> project that contains a <code>DocG</code> Catalog.</p>
+<h2 id="overview"><a class="header" href="#overview">Overview</a></h2>
+<p>This sample code project was based on <a href="https://github.com/apple-sample-code/SlothCreatorBuildingDocCDocumentationInXcode">Apple’s Sloth Creator</a> (MIT).</p>
+<p><strong>Note</strong></p>
+<p>The original <a href="https://developer.apple.com/documentation/xcode/slothcreator_building_docc_documentation_in_xcode">SlothCreator</a> sample code project is associated with the WWDC21 sessions:</p>
+<ul>
+<li><a href="https://developer.apple.com/wwdc21/10166">10166: Meet DocC documentation in Xcode</a>.</li>
+<li><a href="https://developer.apple.com/wwdc21/10167">10167: Elevate your DocC documentation in Xcode</a>.</li>
+<li><a href="https://developer.apple.com/wwdc21/10236">10236: Host and automate your DocC Documentation</a>.</li>
+<li><a href="https://developer.apple.com/wwdc21/10235">10235: Build interactive tutorials in DocC</a>.</li>
+</ul>
+<p>Is recommended to check them to learn more about <a href="https://www.swift.org/documentation/docc/">Swift’s DocC</a>, main inspiration for <em>Gungnir</em>.</p>
+<h2 id="configure-the-sample-code-project"><a class="header" href="#configure-the-sample-code-project">Configure the Sample Code Project</a></h2>
+<p>To build documentation for this package, use <code>Gungnir</code>, go to the project root (where <code>project.odin</code> file is located) and execute the following command:</p>
+<pre><code class="language-shell">$ gungnir .
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><div class="page-header">
+<span class="role-heading">
+<p><strong>Project</strong></p>
+</span>
+<h1 id="slothcreator"><a class="header" href="#slothcreator"><code>SlothCreator</code></a></h1>
+<p>Catalog sloths you find in nature and create new adorable virtual sloths.</p>
+</div>
+<h2 id="overview-1"><a class="header" href="#overview-1">Overview</a></h2>
+<p>SlothCreator provides models and utilities for creating, tracking, and caring for sloths. The framework provides structures to model an individual <code>Sloth</code>, and identify them by key characteristics, including their <code>Sloth/name</code> and special supernatural <code>Sloth/power</code>. You can create your own custom sloths using a <code>SlothGenerator</code>, and name them using a <code>NameGenerator</code>.</p>
+<p>Sloths need careful feeding and maintenance to ensure their health and happiness. You maintain their <code>Sloth/energyLevel</code> by providing the correct <code>Sloth/Food</code> and a suitable <code>Habitat</code>. You can exercise your sloth by providing a fun or restful <code>Activity</code>.</p>
+<h2 id="featured"><a class="header" href="#featured">Featured</a></h2>
+<hr />
+<h3 id="topics"><a class="header" href="#topics">Topics</a></h3>
+<ul>
+<li><a href="articles/GettingStarted.html"><i class="fa fa-book"></i> Getting Started</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="getting-started"><a class="header" href="#getting-started">Getting Started</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><div class="page-header">
+<span class="role-heading">
+<p><strong>Package</strong></p>
+</span>
+<span class="page-title">
+<h1 id="sloth"><a class="header" href="#sloth"><code>Sloth</code></a></h1>
+</span>
+<span class="page-description">
+</span>
+</div>
+<hr />
+<h2 id="topics-1"><a class="header" href="#topics-1">Topics</a></h2>
+<h3 id="enumerations"><a class="header" href="#enumerations">Enumerations</a></h3>
+<!-- Grouped by Symbol type, then sorted by ASC order -->
+<!-- Have enumeration Icon https://lingojam.com/TextToEmojiLetters -->
+<ul>
+<li><a href="src/lib/Sloth/color.odin.d/color.html">🅴 Color</a></li>
+<li><a href="src/lib/Sloth/schedule.odin.d/event.html">🅴 Event</a></li>
+<li><a href="src/lib/Sloth/activity.odin.d/speed.html">🅴 Speed</a></li>
+<li><a href="src/lib/Sloth/food.odin.d/slothfoodenum.html">🅴 SlothFoodEnum</a></li>
+<li><a href="src/lib/Sloth/power.odin.d/power.html">🅴 Power</a></li>
+</ul>
+<h3 id="structs"><a class="header" href="#structs">Structs</a></h3>
+<ul>
+<li><a href="src/lib/Sloth/food.odin.d/food.html">🆂 Food</a></li>
+<li><a href="src/lib/Sloth/habitat.odin.d/habitat.html">🆂 Habitat</a></li>
+<li><a href="src/lib/Sloth/schedule.odin.d/schedule.html">🆂 Schedule</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth.html">🆂 Sloth</a></li>
+</ul>
+<h3 id="constants"><a class="header" href="#constants">Constants</a></h3>
+<ul>
+<li><a href="src/lib/Sloth/food.odin.d/slothfood.html">🅲 SlothFood</a></li>
+</ul>
+<h3 id="procedures"><a class="header" href="#procedures">Procedures</a></h3>
+<ul>
+<li>
+<p><a href="src/lib/Sloth/habitat.odin.d/habitat_comfort_level-db724c769.html">🅿 habitat_comfort_level/1</a></p>
+</li>
+<li>
+<p><a href="src/lib/Sloth/habitat.odin.d/init_habitat-2cc9bae26.html">🅿 init_habitat/2</a></p>
+</li>
+<li>
+<p><a href="src/lib/Sloth/food.odin.d/init_food-04e4b06c0.html">🅿 init_food/2</a></p>
+</li>
+<li>
+<p><a href="src/lib/Sloth/schedule.odin.d/init_schedule-6b4d71c7d.html">🅿 init_schedule/1</a></p>
+</li>
+<li>
+<p><a href="src/lib/Sloth/sloth.odin.d/init_sloth-d710023bf.html">🅿 init_sloth/3</a></p>
+</li>
+<li>
+<p><a href="src/lib/Sloth/sloth.odin.d/sloth_eat-3e351e1ca.html">🅿 sloth_eat/3</a></p>
+</li>
+<li>
+<p><a href="src/lib/Sloth/sloth.odin.d/sloth_eat_food-949942c18.html">🅿 sloth_eat_food/3</a></p>
+</li>
+<li>
+<p><a href="src/lib/Sloth/sloth.odin.d/sloth_eat_default_food-95c5c58aa.html">🅿 sloth_eat_default_food/3</a></p>
+</li>
+<li>
+<p><a href="src/lib/Sloth/sloth.odin.d/sloth_sleep-a454e1238.html">🅿 sloth_sleep/3</a></p>
+</li>
+<li>
+<p><a href="src/lib/Sloth/sloth.odin.d/sloth_perform-c388865f.html">🅿 sloth_perform/3</a></p>
+</li>
+</ul>
+<!-- Here Markline comments can be used to categorize the topics in the overview --><div style="break-before: page; page-break-before: always;"></div><div class="page-header">
+<span class="role-heading">
+<p><strong>Struct</strong></p>
+</span>
+<span class="page-title">
+<h1 id="schedule"><a class="header" href="#schedule"><code>Schedule</code></a></h1>
+</span>
+<span class="page-description">
+<p>A schedule to maintain the health and happiness of a sloth.</p>
+</span>
+</div>
+<h2 id="declaration"><a class="header" href="#declaration">Declaration</a></h2>
+<pre><code class="language-odin">Schedule :: struct
+</code></pre>
+<hr />
+<h2 id="values"><a class="header" href="#values">Values</a></h2>
+<h3 id="events"><a class="header" href="#events">events</a></h3>
+<p>The actions a sloth performs at scheduled times.</p>
+<h4 id="declaration-1"><a class="header" href="#declaration-1">Declaration</a></h4>
+<pre><code class="language-odin">events: map[int]Event
+</code></pre>
+<hr />
+<h2 id="see-also"><a class="header" href="#see-also">See Also</a></h2>
+<ul>
+<li><a href="src/lib/Sloth/schedule.odin.d/event.html">event</a></li>
+<li><a href="src/lib/Sloth/schedule.odin.d/init_schedule-6b4d71c7d.html">init_schedule/1</a></li>
+<li><a href="src/lib/Sloth/schedule.odin.d/schedule.html">schedule</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div class="page-header">
+<span class="role-heading">
+<p><strong>Enumeration</strong></p>
+</span>
+<span class="page-title">
+<h1 id="color"><a class="header" href="#color"><code>Color</code></a></h1>
+</span>
+<span class="page-description">
+<p>The color of a sloth.</p>
+</span>
+</div>
+<h2 id="declaration-2"><a class="header" href="#declaration-2">Declaration</a></h2>
+<pre><code class="language-odin">Color :: enum 
+</code></pre>
+<hr />
+<h2 id="values-1"><a class="header" href="#values-1">Values</a></h2>
+<h3 id="green"><a class="header" href="#green">Green</a></h3>
+<p>The color green.</p>
+<h4 id="declaration-3"><a class="header" href="#declaration-3">Declaration</a></h4>
+<pre><code class="language-odin">Green
+</code></pre>
+<h3 id="yellow"><a class="header" href="#yellow">Yellow</a></h3>
+<p>The color yellow.</p>
+<h4 id="declaration-4"><a class="header" href="#declaration-4">Declaration</a></h4>
+<pre><code class="language-odin">Yellow
+</code></pre>
+<h3 id="orange"><a class="header" href="#orange">Orange</a></h3>
+<p>The color orange.</p>
+<h4 id="declaration-5"><a class="header" href="#declaration-5">Declaration</a></h4>
+<pre><code class="language-odin">Orange
+</code></pre>
+<h3 id="blue"><a class="header" href="#blue">Blue</a></h3>
+<p>The color blue.</p>
+<h4 id="declaration-6"><a class="header" href="#declaration-6">Declaration</a></h4>
+<pre><code class="language-odin">Blue
+</code></pre>
+<hr />
+<h2 id="see-also-1"><a class="header" href="#see-also-1">See Also</a></h2>
+<ul>
+<li><a href="src/lib/Sloth/color.odin.d/color.html">color</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div class="page-header">
+<span class="role-heading">
+<p><strong>Enumeration</strong></p>
+</span>
+<span class="page-title">
+<h1 id="power"><a class="header" href="#power"><code>Power</code></a></h1>
+</span>
+<span class="page-description">
+<p>The power of a sloth.</p>
+</span>
+</div>
+<h2 id="declaration-7"><a class="header" href="#declaration-7">Declaration</a></h2>
+<pre><code class="language-odin">Power :: enum 
+</code></pre>
+<hr />
+<h2 id="values-2"><a class="header" href="#values-2">Values</a></h2>
+<h3 id="ice"><a class="header" href="#ice">Ice</a></h3>
+<p>The ice power.</p>
+<p>Ice sloths thrive below freezing temperatures. Their claws have the power of summoning snow and ice.
+Despite their usual slowness, their metabolism has the ability of speeding up for snowball fights.</p>
+<h4 id="declaration-8"><a class="header" href="#declaration-8">Declaration</a></h4>
+<pre><code class="language-odin">Ice
+</code></pre>
+<h3 id="fire"><a class="header" href="#fire">Fire</a></h3>
+<p>The fire power.</p>
+<p>Fire sloths thrive at boiling temperatures. Their claws have the power of summoning fire.
+A fire sloth is happiest while taking a lava bath.</p>
+<h4 id="declaration-9"><a class="header" href="#declaration-9">Declaration</a></h4>
+<pre><code class="language-odin">Fire
+</code></pre>
+<h3 id="wind"><a class="header" href="#wind">Wind</a></h3>
+<p>The wind power.</p>
+<p>Wind sloths thrive at soaring altitudes. Their claws have the power of summoning wind, propelling their furry
+bodies through the air in a motion similar to flying. The high speed of the wind causes the sloths’ fur to
+be in perpetual disarray.</p>
+<h4 id="declaration-10"><a class="header" href="#declaration-10">Declaration</a></h4>
+<pre><code class="language-odin">Wind
+</code></pre>
+<h3 id="lightning"><a class="header" href="#lightning">Lightning</a></h3>
+<p>The lightning power.</p>
+<p>Lightning sloths thrive in stormy climates. Their claws have the power of summoning lightning. Beware of
+shaking a lightning sloth’s hand without rubber shoes.</p>
+<h4 id="declaration-11"><a class="header" href="#declaration-11">Declaration</a></h4>
+<pre><code class="language-odin">Lightning
+</code></pre>
+<h3 id="none"><a class="header" href="#none">None</a></h3>
+<p>No special power.</p>
+<p>Standard sloths are still extraordinary creatures. Their claws have the power of holding onto tree branches,
+rocky outcrops, and outstretched arms. They might be slow, but they are still magnificent.</p>
+<h4 id="declaration-12"><a class="header" href="#declaration-12">Declaration</a></h4>
+<pre><code class="language-odin">None
+</code></pre>
+<hr />
+<h2 id="see-also-2"><a class="header" href="#see-also-2">See Also</a></h2>
+<ul>
+<li><a href="src/lib/Sloth/power.odin.d/power.html">power</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div class="page-header">
+<span class="role-heading">
+<p><strong>Enumeration</strong></p>
+</span>
+<span class="page-title">
+<h1 id="speed"><a class="header" href="#speed"><code>Speed</code></a></h1>
+</span>
+<span class="page-description">
+<p>A measure of a sloth’s speed during an activity.</p>
+</span>
+</div>
+<h2 id="speeds"><a class="header" href="#speeds">Speeds</a></h2>
+<!-- 
+Double backticks by default links a symbol in the file. 
+pkg: will link to a symbol in the same package.
+file: Will link to a symbol in the filesystem.
+odin: Will link to an url in the odin website.
+forum: Will link to an url in the odin fourm.
+docs: Will link to an url in the odin pkg docs.
+-->
+<ul>
+<li><code>Slow</code></li>
+<li><code>Medium</code></li>
+<li><code>Fast</code></li>
+<li><code>Supersonic</code></li>
+</ul>
+<h3 id="comparing-speeds"><a class="header" href="#comparing-speeds">Comparing Speeds</a></h3>
+<ul>
+<li><a href="https://odin-lang.org/docs/overview/#comparison-operators"><code>odin:docs/overview/#comparison-operators</code></a></li>
+</ul>
+<h2 id="declaration-13"><a class="header" href="#declaration-13">Declaration</a></h2>
+<pre><code class="language-odin">Speed :: enum 
+</code></pre>
+<hr />
+<h2 id="values-3"><a class="header" href="#values-3">Values</a></h2>
+<h3 id="slow"><a class="header" href="#slow">Slow</a></h3>
+<p>Moves slightly faster than a snail.</p>
+<h4 id="declaration-14"><a class="header" href="#declaration-14">Declaration</a></h4>
+<pre><code class="language-odin">Slow
+</code></pre>
+<h3 id="medium"><a class="header" href="#medium">Medium</a></h3>
+<p>Moves at an average speed.</p>
+<h4 id="declaration-15"><a class="header" href="#declaration-15">Declaration</a></h4>
+<pre><code class="language-odin">Medium
+</code></pre>
+<h3 id="fast"><a class="header" href="#fast">Fast</a></h3>
+<p>Moves faster than a hare.</p>
+<h4 id="declaration-16"><a class="header" href="#declaration-16">Declaration</a></h4>
+<pre><code class="language-odin">Fast
+</code></pre>
+<h3 id="supersonic"><a class="header" href="#supersonic">Supersonic</a></h3>
+<p>Moves faster than the speed of sound.</p>
+<h4 id="declaration-17"><a class="header" href="#declaration-17">Declaration</a></h4>
+<pre><code class="language-odin">Supersonic
+</code></pre>
+<hr />
+<h2 id="see-also-3"><a class="header" href="#see-also-3">See Also</a></h2>
+<ul>
+<li><a href="src/lib/Sloth/activity.odin.d/speed.html">speed</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div class="page-header">
+<span class="role-heading">
+<p><strong>Enumeration</strong></p>
+</span>
+<span class="page-title">
+<h1 id="slothfoodenum"><a class="header" href="#slothfoodenum"><code>SlothFoodEnum</code></a></h1>
+</span>
+<span class="page-description">
+<p>Default Sloth Food Enum.</p>
+</span>
+</div>
+<h2 id="declaration-18"><a class="header" href="#declaration-18">Declaration</a></h2>
+<pre><code class="language-odin">SlothFoodEnum :: enum
+</code></pre>
+<hr />
+<h2 id="values-4"><a class="header" href="#values-4">Values</a></h2>
+<h3 id="green-1"><a class="header" href="#green-1">Green</a></h3>
+<p>A spindly stick.</p>
+<h4 id="declaration-19"><a class="header" href="#declaration-19">Declaration</a></h4>
+<pre><code class="language-odin">Twig
+</code></pre>
+<h3 id="twig"><a class="header" href="#twig">Twig</a></h3>
+<p>A regular-sized leaf.</p>
+<h4 id="declaration-20"><a class="header" href="#declaration-20">Declaration</a></h4>
+<pre><code class="language-odin">Twig
+</code></pre>
+<h3 id="regular_leaf"><a class="header" href="#regular_leaf">Regular_Leaf</a></h3>
+<p>A regular-sized leaf.</p>
+<h4 id="declaration-21"><a class="header" href="#declaration-21">Declaration</a></h4>
+<pre><code class="language-odin">Regular_Leaf
+</code></pre>
+<h3 id="large_leaf"><a class="header" href="#large_leaf">Large_Leaf</a></h3>
+<p>A large leaf.</p>
+<h4 id="declaration-22"><a class="header" href="#declaration-22">Declaration</a></h4>
+<pre><code class="language-odin">Large_Leaf
+</code></pre>
+<hr />
+<h2 id="see-also-4"><a class="header" href="#see-also-4">See Also</a></h2>
+<ul>
+<li><a href="src/lib/Sloth/food.odin.d/food.html">food</a></li>
+<li><a href="src/lib/Sloth/food.odin.d/init_food-04e4b06c0.html">init_food/2</a></li>
+<li><a href="src/lib/Sloth/food.odin.d/slothfood.html">slothfood</a></li>
+<li><a href="src/lib/Sloth/food.odin.d/slothfoodenum.html">slothfoodenum</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div class="page-header">
+<span class="role-heading">
+<p><strong>Struct</strong></p>
+</span>
+<span class="page-title">
+<h1 id="food"><a class="header" href="#food"><code>Food</code></a></h1>
+</span>
+<span class="page-description">
+<p>Food that a sloth can consume.</p>
+<p>Sloths love to eat the leaves and twigs they find in the rainforest canopy as they
+slowly move around. To feed them these items, you can use the <code>Twig</code>,
+<code>Regular_Leaf</code> and <code>Large_Leaf</code> default foods.</p>
+<pre><code class="language-odin">Sloth.sloth_eat(sloth, Sloth.SlothFoodEnum.Large_Leaf)
+</code></pre>
+<p>You can also define your own custom sloth food by providing a name and the
+energy level. When the sloth eats your custom food, their energy level increases
+by the <code>energy</code> of the food:</p>
+<pre><code class="language-odin">flower := Food{name = "Flower Bud", energy = 10}
+Sloth.sloth_eat(sloth, flower)
+</code></pre>
+</span>
+</div>
+<h2 id="declaration-23"><a class="header" href="#declaration-23">Declaration</a></h2>
+<pre><code class="language-odin">Food :: struct
+</code></pre>
+<hr />
+<h2 id="values-5"><a class="header" href="#values-5">Values</a></h2>
+<h3 id="name"><a class="header" href="#name">name</a></h3>
+<p>The name of the food.</p>
+<h4 id="declaration-24"><a class="header" href="#declaration-24">Declaration</a></h4>
+<pre><code class="language-odin">name: string
+</code></pre>
+<h3 id="energy"><a class="header" href="#energy">energy</a></h3>
+<p>The amount of energy the food contains.</p>
+<p>When sloths metabolize the food they eat, their <code>Sloth/energy_level</code>
+increases by the amount of energy the food contains.</p>
+<h4 id="declaration-25"><a class="header" href="#declaration-25">Declaration</a></h4>
+<pre><code class="language-odin">energy: int
+</code></pre>
+<hr />
+<h2 id="see-also-5"><a class="header" href="#see-also-5">See Also</a></h2>
+<ul>
+<li><a href="src/lib/Sloth/food.odin.d/food.html">food</a></li>
+<li><a href="src/lib/Sloth/food.odin.d/init_food-04e4b06c0.html">init_food/2</a></li>
+<li><a href="src/lib/Sloth/food.odin.d/slothfood.html">slothfood</a></li>
+<li><a href="src/lib/Sloth/food.odin.d/slothfoodenum.html">slothfoodenum</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div class="page-header">
+<span class="role-heading">
+<p><strong>Struct</strong></p>
+</span>
+<span class="page-title">
+<h1 id="habitat"><a class="header" href="#habitat"><code>Habitat</code></a></h1>
+</span>
+<span class="page-description">
+<p>The habitat where sloths live.</p>
+<p>Sloths love hanging out in rain forests, and are especially grateful for hot and humid habitats.</p>
+<p>They spend much of their time asleep, so make sure the habitats you create provide comfortable and reliable branches in a large number of trees for them to feel safe and protected.</p>
+<p>The warmth and humidity of the habitat affect how much a sloth’s <code>Sloth/energy_level</code> increases when they sleep:</p>
+<pre><code class="language-odin">
+lovely_habitat := Habitat{is_humid = true, is_warm = true}
+
+cold_dry_habitat := Habitat{is_humid = false, is_warm = false}
+
+sloth_sleep(warm_sloth, lovely_habitat)
+
+sloth_sleep(icy_sloth, cold_dry_habitat, number_of_hours = 22)
+
+</code></pre>
+</span>
+</div>
+<h2 id="declaration-26"><a class="header" href="#declaration-26">Declaration</a></h2>
+<pre><code class="language-odin">Habitat :: struct
+</code></pre>
+<hr />
+<h2 id="values-6"><a class="header" href="#values-6">Values</a></h2>
+<h3 id="is_humid"><a class="header" href="#is_humid">is_humid</a></h3>
+<p>An indicator of whether the habitat is humid.</p>
+<h4 id="declaration-27"><a class="header" href="#declaration-27">Declaration</a></h4>
+<pre><code class="language-odin">is_humid: bool
+</code></pre>
+<h3 id="is_warm"><a class="header" href="#is_warm">is_warm</a></h3>
+<p>An indicator of whether the habitat is warm.</p>
+<h4 id="declaration-28"><a class="header" href="#declaration-28">Declaration</a></h4>
+<pre><code class="language-odin">is_warm: bool
+</code></pre>
+<hr />
+<h2 id="see-also-6"><a class="header" href="#see-also-6">See Also</a></h2>
+<ul>
+<li><a href="src/lib/Sloth/habitat.odin.d/habitat.html">habitat</a></li>
+<li><a href="src/lib/Sloth/habitat.odin.d/habitat_comfort_level-db724c769.html">habitat_comfort_level/1</a></li>
+<li><a href="src/lib/Sloth/habitat.odin.d/init_habitat-2cc9bae26.html">init_habitat/2</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div class="page-header">
+<span class="role-heading">
+<p><strong>Struct</strong></p>
+</span>
+<span class="page-title">
+<h1 id="schedule-1"><a class="header" href="#schedule-1"><code>Schedule</code></a></h1>
+</span>
+<span class="page-description">
+<p>A schedule to maintain the health and happiness of a sloth.</p>
+</span>
+</div>
+<h2 id="declaration-29"><a class="header" href="#declaration-29">Declaration</a></h2>
+<pre><code class="language-odin">Schedule :: struct
+</code></pre>
+<hr />
+<h2 id="values-7"><a class="header" href="#values-7">Values</a></h2>
+<h3 id="events-1"><a class="header" href="#events-1">events</a></h3>
+<p>The actions a sloth performs at scheduled times.</p>
+<h4 id="declaration-30"><a class="header" href="#declaration-30">Declaration</a></h4>
+<pre><code class="language-odin">events: map[int]Event
+</code></pre>
+<hr />
+<h2 id="see-also-7"><a class="header" href="#see-also-7">See Also</a></h2>
+<ul>
+<li><a href="src/lib/Sloth/schedule.odin.d/event.html">event</a></li>
+<li><a href="src/lib/Sloth/schedule.odin.d/init_schedule-6b4d71c7d.html">init_schedule/1</a></li>
+<li><a href="src/lib/Sloth/schedule.odin.d/schedule.html">schedule</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div class="page-header">
+<span class="role-heading">
+<p><strong>Struct</strong></p>
+</span>
+<span class="page-title">
+<h1 id="sloth-1"><a class="header" href="#sloth-1"><code>Sloth</code></a></h1>
+</span>
+<span class="page-description">
+<p>A model representing a sloth.</p>
+<p>Sloths are mammals known for their slowness of movement. They spend most of their lives hanging upside down in trees.</p>
+<p>You can create a sloth using the <code>init_sloth/3</code> initializer, or
+create a randomly generated sloth using <code>Generators/generate_sloth/1</code>:</p>
+<pre><code class="language-odin">habitat := Sloth.init_habitat(is_humid = true, is_warm = true)
+
+sloth := Generators.generate_sloth(habitat)
+</code></pre>
+</span>
+</div>
+<h2 id="declaration-31"><a class="header" href="#declaration-31">Declaration</a></h2>
+<pre><code class="language-odin">Sloth :: struct
+</code></pre>
+<hr />
+<h2 id="values-8"><a class="header" href="#values-8">Values</a></h2>
+<h3 id="name-1"><a class="header" href="#name-1">name</a></h3>
+<p>The name of the sloth.</p>
+<h4 id="declaration-32"><a class="header" href="#declaration-32">Declaration</a></h4>
+<pre><code class="language-odin">name: string
+</code></pre>
+<h3 id="color-1"><a class="header" href="#color-1">color</a></h3>
+<p>The color of the sloth.</p>
+<h4 id="declaration-33"><a class="header" href="#declaration-33">Declaration</a></h4>
+<pre><code class="language-odin">color: Color
+</code></pre>
+<h3 id="power-1"><a class="header" href="#power-1">power</a></h3>
+<p>The power of the sloth.</p>
+<h4 id="declaration-34"><a class="header" href="#declaration-34">Declaration</a></h4>
+<pre><code class="language-odin">power: Power
+</code></pre>
+<h3 id="energy_level"><a class="header" href="#energy_level">energy_level</a></h3>
+<p>The energy level of the sloth.</p>
+<p>Sloths have a very low metabolic rate, so their energy level is often low as well. It’s
+important to check their energy level often, and offer them food or opportunities to sleep
+before asking them to perform an activity or exercise.</p>
+<p>You can increase the sloth’s energy level by asking them to <code>sloth_eat/3</code> or <code>sloth_sleep/3</code>.</p>
+<h4 id="declaration-35"><a class="header" href="#declaration-35">Declaration</a></h4>
+<pre><code class="language-odin">energy_level: int
+</code></pre>
+<h3 id="schedule-2"><a class="header" href="#schedule-2">schedule</a></h3>
+<p>The care schedule of the sloth.</p>
+<p>A care schedule maintains the health and happiness of the sloth.</p>
+<h4 id="declaration-36"><a class="header" href="#declaration-36">Declaration</a></h4>
+<pre><code class="language-odin">schedule: Schedule
+</code></pre>
+<hr />
+<h2 id="see-also-8"><a class="header" href="#see-also-8">See Also</a></h2>
+<ul>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth.html">sloth</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/init_sloth-d710023bf.html">init_sloth/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_eat-3e351e1ca.html">sloth_eat/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_eat_food-949942c18.html">sloth_eat_food/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_eat_default_food-95c5c58aa.html">sloth_eat_default_food/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_perform-c388865f.html">sloth_perform/1</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_sleep-a454e1238.html">sloth_sleep/3</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div class="page-header">
+<span class="role-heading">
+<p><strong>Constant</strong></p>
+</span>
+<span class="page-title">
+<h1 id="slothfood"><a class="header" href="#slothfood"><code>SlothFood</code></a></h1>
+</span>
+<span class="page-description">
+<p>Default Sloth Food Struct.</p>
+<pre><code class="language-odin">food := SlothFood[.Twig]
+</code></pre>
+</span>
+</div>
+<h2 id="declaration-37"><a class="header" href="#declaration-37">Declaration</a></h2>
+<pre><code class="language-odin">@(rodata)
+SlothFood := [SlothFoodEnum]Food
+</code></pre>
+<hr />
+<h2 id="values-9"><a class="header" href="#values-9">Values</a></h2>
+<h3 id="twig-1"><a class="header" href="#twig-1">.Twig</a></h3>
+<p>A spindly stick</p>
+<h4 id="declaration-38"><a class="header" href="#declaration-38">Declaration</a></h4>
+<pre><code class="language-odin">.Twig = Food{name = "Twig", energy = 1}
+</code></pre>
+<h3 id="regular_leaf-1"><a class="header" href="#regular_leaf-1">.Regular_Leaf</a></h3>
+<p>A regular-sized leaf.</p>
+<h4 id="declaration-39"><a class="header" href="#declaration-39">Declaration</a></h4>
+<pre><code class="language-odin">.Regular_Leaf = Food{name = "Regular Leaf", energy = 2},
+</code></pre>
+<h3 id="regular_leaf-2"><a class="header" href="#regular_leaf-2">.Regular_Leaf</a></h3>
+<p>A large leaf.</p>
+<h4 id="declaration-40"><a class="header" href="#declaration-40">Declaration</a></h4>
+<pre><code class="language-odin">.Large_Leaf = Food{name = "Large Leaf", energy = 5},
+</code></pre>
+<hr />
+<h2 id="see-also-9"><a class="header" href="#see-also-9">See Also</a></h2>
+<ul>
+<li><a href="src/lib/Sloth/food.odin.d/food.html">food</a></li>
+<li><a href="src/lib/Sloth/food.odin.d/init_food-04e4b06c0.html">init_food/2</a></li>
+<li><a href="src/lib/Sloth/food.odin.d/slothfood.html">slothfood</a></li>
+<li><a href="src/lib/Sloth/food.odin.d/slothfoodenum.html">slothfoodenum</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div class="page-header">
+<span class="role-heading">
+<p><strong>Procedure</strong></p>
+</span>
+<span class="page-title">
+<h1 id="init_food2"><a class="header" href="#init_food2"><code>init_food/2</code></a></h1>
+</span>
+<span class="page-description">
+<p>Creates food with the specified name and energy level.</p>
+<h2 id="parameters"><a class="header" href="#parameters">Parameters</a></h2>
+<ul>
+<li>name: The name of the food.</li>
+<li>energy: The amount of energy the food contains.</li>
+</ul>
+</span>
+</div>
+<h2 id="declaration-41"><a class="header" href="#declaration-41">Declaration</a></h2>
+<pre><code class="language-odin">init_food :: proc(name: string, energy: int) -&gt; Food 
+</code></pre>
+<hr />
+<h2 id="see-also-10"><a class="header" href="#see-also-10">See Also</a></h2>
+<ul>
+<li><a href="src/lib/Sloth/food.odin.d/food.html">food</a></li>
+<li><a href="src/lib/Sloth/food.odin.d/init_food-04e4b06c0.html">init_food/2</a></li>
+<li><a href="src/lib/Sloth/food.odin.d/slothfood.html">slothfood</a></li>
+<li><a href="src/lib/Sloth/food.odin.d/slothfoodenum.html">slothfoodenum</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div class="page-header">
+<span class="role-heading">
+<p><strong>Procedure</strong></p>
+</span>
+<span class="page-title">
+<h1 id="init_schedule1"><a class="header" href="#init_schedule1"><code>init_schedule/1</code></a></h1>
+</span>
+<span class="page-description">
+<p>Creates a care schedule with the specified events.</p>
+<h2 id="parameters-1"><a class="header" href="#parameters-1">Parameters</a></h2>
+<ul>
+<li>events: The actions a sloth performs at scheduled times.</li>
+</ul>
+</span>
+</div>
+<h2 id="declaration-42"><a class="header" href="#declaration-42">Declaration</a></h2>
+<pre><code class="language-odin">init_schedule :: proc(events: map[int]Event) -&gt; Schedule 
+</code></pre>
+<hr />
+<h2 id="see-also-11"><a class="header" href="#see-also-11">See Also</a></h2>
+<ul>
+<li><a href="src/lib/Sloth/schedule.odin.d/event.html">event</a></li>
+<li><a href="src/lib/Sloth/schedule.odin.d/init_schedule-6b4d71c7d.html">init_schedule/1</a></li>
+<li><a href="src/lib/Sloth/schedule.odin.d/schedule.html">schedule</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div class="page-header">
+<span class="role-heading">
+<p><strong>Procedure</strong></p>
+</span>
+<span class="page-title">
+<h1 id="init_habitat2"><a class="header" href="#init_habitat2"><code>init_habitat/2</code></a></h1>
+</span>
+<span class="page-description">
+<p>Creates a habitat with the specified humidity and temperature.</p>
+</span>
+</div>
+<h2 id="declaration-43"><a class="header" href="#declaration-43">Declaration</a></h2>
+<pre><code class="language-odin">init_habitat :: proc(is_humid: bool, is_warm: bool) -&gt; Habitat
+</code></pre>
+<hr />
+<h2 id="see-also-12"><a class="header" href="#see-also-12">See Also</a></h2>
+<ul>
+<li><a href="src/lib/Sloth/habitat.odin.d/habitat.html">habitat</a></li>
+<li><a href="src/lib/Sloth/habitat.odin.d/habitat_comfort_level-db724c769.html">habitat_comfort_level/1</a></li>
+<li><a href="src/lib/Sloth/habitat.odin.d/init_habitat-2cc9bae26.html">init_habitat/2</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div class="page-header">
+<span class="role-heading">
+<p><strong>Procedure</strong></p>
+</span>
+<span class="page-title">
+<h1 id="habitat_comfort_level1"><a class="header" href="#habitat_comfort_level1"><code>habitat_comfort_level/1</code></a></h1>
+</span>
+<span class="page-description">
+<p>An indicator of how comfortable a sloth might find the habitat.</p>
+</span>
+</div>
+<h2 id="declaration-44"><a class="header" href="#declaration-44">Declaration</a></h2>
+<pre><code class="language-odin">habitat_comfort_level :: proc(habitat: Habitat) -&gt; int 
+</code></pre>
+<hr />
+<h2 id="see-also-13"><a class="header" href="#see-also-13">See Also</a></h2>
+<ul>
+<li><a href="src/lib/Sloth/habitat.odin.d/habitat.html">habitat</a></li>
+<li><a href="src/lib/Sloth/habitat.odin.d/habitat_comfort_level-db724c769.html">habitat_comfort_level/1</a></li>
+<li><a href="src/lib/Sloth/habitat.odin.d/init_habitat-2cc9bae26.html">init_habitat/2</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div class="page-header">
+<span class="role-heading">
+<p><strong>Procedure</strong></p>
+</span>
+<span class="page-title">
+<h1 id="init_sloth3"><a class="header" href="#init_sloth3"><code>init_sloth/3</code></a></h1>
+</span>
+<span class="page-description">
+<p>Creates a sloth with the specified name and color.</p>
+<h2 id="parameters-2"><a class="header" href="#parameters-2">Parameters</a></h2>
+<ul>
+<li>name: The name of the sloth.</li>
+<li>color: The color of the sloth.</li>
+<li>power: The power of the sloth.</li>
+</ul>
+</span>
+</div>
+<h2 id="declaration-45"><a class="header" href="#declaration-45">Declaration</a></h2>
+<pre><code class="language-odin">init_sloth :: proc(name: string, color: Color = .Yellow, power: Power = .None) -&gt; Sloth
+</code></pre>
+<hr />
+<h2 id="see-also-14"><a class="header" href="#see-also-14">See Also</a></h2>
+<ul>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth.html">sloth</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/init_sloth-d710023bf.html">init_sloth/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_eat-3e351e1ca.html">sloth_eat/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_eat_food-949942c18.html">sloth_eat_food/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_eat_default_food-95c5c58aa.html">sloth_eat_default_food/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_perform-c388865f.html">sloth_perform/1</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_sleep-a454e1238.html">sloth_sleep/3</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div class="page-header">
+<span class="role-heading">
+<p><strong>Procedure</strong></p>
+</span>
+<span class="page-title">
+<h1 id="sloth_eat3"><a class="header" href="#sloth_eat3"><code>sloth_eat/3</code></a></h1>
+</span>
+<span class="page-description">
+<p>Eat the provided specialty sloth food.</p>
+<p>Sloths love to eat while they move very slowly through their rainforest habitats. They
+are especially happy to consume leaves and twigs, which they digest over long periods
+of time, mostly while they sleep.</p>
+<p>When they eat food, a sloth’s <code>energy_level</code> increases by the food’s
+<code>Food/energy</code>. You can feed a sloth any custom <code>Food</code> that you define
+yourself, or you can feed them one of the standard foods of <code>Food/Twig</code>,
+<code>Food/Large_Leaf</code>, or <code>Food/Regular_Leaf</code>:</p>
+<pre><code class="language-odin">sloth_eat(sleepy_sloth, .Twig)
+
+flower := Food{name = "Flower Bud", energy = 10}
+sloth_eat(super_sloth, flower)
+</code></pre>
+<p>By default, the sloth eats one of the food items you provide, but you can also specify
+how many of the items the sloth should eat if you have an abundance to share with them:</p>
+<pre><code class="language-odin">twig := SlothFoodEnum[.Twig]
+sloth_eat(twig_happy_slot, twig, 10)
+</code></pre>
+<h2 id="parameters-3"><a class="header" href="#parameters-3">Parameters</a></h2>
+<ul>
+<li>name: The name of the sloth.</li>
+<li>color: The color of the sloth.</li>
+<li>power: The power of the sloth.</li>
+</ul>
+<h2 id="returns"><a class="header" href="#returns">Returns</a></h2>
+<ul>
+<li>The sloth’s energy level after eating.</li>
+</ul>
+</span>
+</div>
+<h2 id="declaration-46"><a class="header" href="#declaration-46">Declaration</a></h2>
+<pre><code class="language-odin">sloth_eat :: proc {
+    sloth_eat_food,
+    sloth_eat_default_food,
+}
+</code></pre>
+<hr />
+<h2 id="see-also-15"><a class="header" href="#see-also-15">See Also</a></h2>
+<ul>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth.html">sloth</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/init_sloth-d710023bf.html">init_sloth/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_eat-3e351e1ca.html">sloth_eat/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_eat_food-949942c18.html">sloth_eat_food/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_eat_default_food-95c5c58aa.html">sloth_eat_default_food/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_perform-c388865f.html">sloth_perform/1</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_sleep-a454e1238.html">sloth_sleep/3</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div class="page-header">
+<span class="role-heading">
+<p><strong>Procedure</strong></p>
+</span>
+<span class="page-title">
+<h1 id="sloth_eat_food3"><a class="header" href="#sloth_eat_food3"><code>sloth_eat_food/3</code></a></h1>
+</span>
+<span class="page-description">
+<p>Sloth eat with a food struct param</p>
+</span>
+</div>
+<h2 id="declaration-47"><a class="header" href="#declaration-47">Declaration</a></h2>
+<pre><code class="language-odin">sloth_eat_food :: proc(sloth : Sloth, food: Food, quantity: int = 1) -&gt; int
+</code></pre>
+<hr />
+<h2 id="see-also-16"><a class="header" href="#see-also-16">See Also</a></h2>
+<ul>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth.html">sloth</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/init_sloth-d710023bf.html">init_sloth/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_eat-3e351e1ca.html">sloth_eat/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_eat_food-949942c18.html">sloth_eat_food/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_eat_default_food-95c5c58aa.html">sloth_eat_default_food/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_perform-c388865f.html">sloth_perform/1</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_sleep-a454e1238.html">sloth_sleep/3</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div class="page-header">
+<span class="role-heading">
+<p><strong>Procedure</strong></p>
+</span>
+<span class="page-title">
+<h1 id="sloth_eat_default_food3"><a class="header" href="#sloth_eat_default_food3"><code>sloth_eat_default_food/3</code></a></h1>
+</span>
+<span class="page-description">
+<p>Sloth eat with a food enum param.</p>
+</span>
+</div>
+<h2 id="declaration-48"><a class="header" href="#declaration-48">Declaration</a></h2>
+<pre><code class="language-odin">sloth_eat_default_food :: proc(sloth: Sloth, food : SlothFoodEnum, quantity: int = 1) -&gt; int
+</code></pre>
+<hr />
+<h2 id="see-also-17"><a class="header" href="#see-also-17">See Also</a></h2>
+<ul>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth.html">sloth</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/init_sloth-d710023bf.html">init_sloth/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_eat-3e351e1ca.html">sloth_eat/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_eat_food-949942c18.html">sloth_eat_food/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_eat_default_food-95c5c58aa.html">sloth_eat_default_food/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_perform-c388865f.html">sloth_perform/1</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_sleep-a454e1238.html">sloth_sleep/3</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div class="page-header">
+<span class="role-heading">
+<p><strong>Procedure</strong></p>
+</span>
+<span class="page-title">
+<h1 id="sloth_sleep3"><a class="header" href="#sloth_sleep3"><code>sloth_sleep/3</code></a></h1>
+</span>
+<span class="page-description">
+<p>Sleep in the specified habitat for a number of hours.</p>
+<p>Sloths need to sleep for a large number of hours each day because of their low metabolic
+rate. Each time the sloth sleeps, their <code>energy_level</code> increases every hour by the
+habitat’s <code>Habitat/comfort_level</code>.</p>
+<p>By default, the sloth sleeps for 12 hours:</p>
+<pre><code class="language-odin">sloth_sleep(tired_sloth, lovely_habitat)
+</code></pre>
+<p>You can also specify a custom number of hours:</p>
+<pre><code class="language-odin">sloth_sleep(nearly_awake_sloth, lovely_habitat, 3)
+</code></pre>
+<h3 id="parameters-4"><a class="header" href="#parameters-4">Parameters</a></h3>
+<ul>
+<li>habitat: The location for the sloth to sleep.</li>
+<li>number_of_hours: The number of hours for the sloth to sleep. Default 12 hours.</li>
+</ul>
+<h3 id="returns-1"><a class="header" href="#returns-1">Returns</a></h3>
+<ul>
+<li>The sloth’s energy level after sleeping.</li>
+</ul>
+</span>
+</div>
+<h2 id="declaration-49"><a class="header" href="#declaration-49">Declaration</a></h2>
+<pre><code class="language-odin">sloth_sleep :: proc(sloth: Sloth, habitat: Habitat, number_of_hours: int = 12) -&gt; int
+</code></pre>
+<hr />
+<h2 id="see-also-18"><a class="header" href="#see-also-18">See Also</a></h2>
+<ul>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth.html">sloth</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/init_sloth-d710023bf.html">init_sloth/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_eat-3e351e1ca.html">sloth_eat/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_eat_food-949942c18.html">sloth_eat_food/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_eat_default_food-95c5c58aa.html">sloth_eat_default_food/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_perform-c388865f.html">sloth_perform/1</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_sleep-a454e1238.html">sloth_sleep/3</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><div class="page-header">
+<span class="role-heading">
+<p><strong>Procedure</strong></p>
+</span>
+<span class="page-title">
+<h1 id="sloth_perform1"><a class="header" href="#sloth_perform1"><code>sloth_perform/1</code></a></h1>
+</span>
+<span class="page-description">
+<p>A type that declares an activity a Sloth can perform.</p>
+<p>Performs the work or sequence of actions for an activity.</p>
+<h3 id="parameters-5"><a class="header" href="#parameters-5">Parameters</a></h3>
+<ul>
+<li>sloth: The sloth performing the activity.</li>
+</ul>
+<h3 id="returns-2"><a class="header" href="#returns-2">Returns</a></h3>
+<ul>
+<li>The speed at which the sloth performs the activity.</li>
+</ul>
+</span>
+</div>
+<h2 id="declaration-50"><a class="header" href="#declaration-50">Declaration</a></h2>
+<pre><code class="language-odin">sloth_perform :: proc(sloth: Sloth) -&gt; Speed
+</code></pre>
+<hr />
+<h2 id="see-also-19"><a class="header" href="#see-also-19">See Also</a></h2>
+<ul>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth.html">sloth</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/init_sloth-d710023bf.html">init_sloth/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_eat-3e351e1ca.html">sloth_eat/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_eat_food-949942c18.html">sloth_eat_food/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_eat_default_food-95c5c58aa.html">sloth_eat_default_food/3</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_perform-c388865f.html">sloth_perform/1</a></li>
+<li><a href="src/lib/Sloth/sloth.odin.d/sloth_sleep-a454e1238.html">sloth_sleep/3</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
