@@ -12,6 +12,14 @@ function md.serve {
     popd
 }
 
+function md.publish {
+    md.build
+    pushd .
+    cd ../../
+    cp -R resources/SlothCreator/priv/documentation/project.docg/book docs/SlothCreator
+    popd
+}
+
 function default {
     # Default task to execute
     # Run the project.odin main procedure

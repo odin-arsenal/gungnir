@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>SlothFoodEnum - SlothCreator</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="Catalog sloths you find in nature and create new adorable virtual sloths.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../../../favicon.svg">
+        <link rel="shortcut icon" href="../../../../favicon.png">
+        <link rel="stylesheet" href="../../../../css/variables.css">
+        <link rel="stylesheet" href="../../../../css/general.css">
+        <link rel="stylesheet" href="../../../../css/chrome.css">
+        <link rel="stylesheet" href="../../../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../../highlight.css">
+        <link rel="stylesheet" href="../../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../../../.././theme/styles/theme.min.css">
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Sloth Creator</li><li class="chapter-item expanded "><a href="../../../../src/index.html"><strong aria-hidden="true">1.</strong> About</a></li><li class="chapter-item expanded "><a href="../../../../Overview.html"><strong aria-hidden="true">2.</strong> Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">Articles</li><li class="chapter-item expanded "><a href="../../../../articles/GettingStarted.html"><strong aria-hidden="true">3.</strong> Getting Started</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded affix "><li class="part-title">Package: Sloth </li><li class="chapter-item expanded "><a href="../../../../src/lib/Sloth/overview.html"><strong aria-hidden="true">4.</strong> Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">Enums</li><li class="chapter-item expanded "><a href="../../../../src/lib/Sloth/schedule.odin.d/schedule.html"><strong aria-hidden="true">5.</strong> Event</a></li><li class="chapter-item expanded "><a href="../../../../src/lib/Sloth/color.odin.d/color.html"><strong aria-hidden="true">6.</strong> Color</a></li><li class="chapter-item expanded "><a href="../../../../src/lib/Sloth/power.odin.d/power.html"><strong aria-hidden="true">7.</strong> Power</a></li><li class="chapter-item expanded "><a href="../../../../src/lib/Sloth/activity.odin.d/speed.html"><strong aria-hidden="true">8.</strong> Speed</a></li><li class="chapter-item expanded "><a href="../../../../src/lib/Sloth/food.odin.d/slothfoodenum.html" class="active"><strong aria-hidden="true">9.</strong> SlothFoodEnum</a></li><li class="chapter-item expanded affix "><li class="part-title">Structs</li><li class="chapter-item expanded "><a href="../../../../src/lib/Sloth/food.odin.d/food.html"><strong aria-hidden="true">10.</strong> Food</a></li><li class="chapter-item expanded "><a href="../../../../src/lib/Sloth/habitat.odin.d/habitat.html"><strong aria-hidden="true">11.</strong> Habitat</a></li><li class="chapter-item expanded "><a href="../../../../src/lib/Sloth/schedule.odin.d/schedule.html"><strong aria-hidden="true">12.</strong> Schedule</a></li><li class="chapter-item expanded "><a href="../../../../src/lib/Sloth/sloth.odin.d/sloth.html"><strong aria-hidden="true">13.</strong> Sloth</a></li><li class="chapter-item expanded affix "><li class="part-title">Constants</li><li class="chapter-item expanded "><a href="../../../../src/lib/Sloth/food.odin.d/slothfood.html"><strong aria-hidden="true">14.</strong> SlothFood</a></li><li class="chapter-item expanded affix "><li class="part-title">Procedures</li><li class="chapter-item expanded "><a href="../../../../src/lib/Sloth/food.odin.d/init_food-04e4b06c0.html"><strong aria-hidden="true">15.</strong> init_food/2</a></li><li class="chapter-item expanded "><a href="../../../../src/lib/Sloth/schedule.odin.d/init_schedule-6b4d71c7d.html"><strong aria-hidden="true">16.</strong> init_schedule/1</a></li><li class="chapter-item expanded "><a href="../../../../src/lib/Sloth/habitat.odin.d/init_habitat-2cc9bae26.html"><strong aria-hidden="true">17.</strong> init_habitat/2</a></li><li class="chapter-item expanded "><a href="../../../../src/lib/Sloth/habitat.odin.d/habitat_comfort_level-db724c769.html"><strong aria-hidden="true">18.</strong> habitat_comfort_level/2</a></li><li class="chapter-item expanded "><a href="../../../../src/lib/Sloth/sloth.odin.d/init_sloth-d710023bf.html"><strong aria-hidden="true">19.</strong> init_sloth/3</a></li><li class="chapter-item expanded "><a href="../../../../src/lib/Sloth/sloth.odin.d/sloth_eat-3e351e1ca.html"><strong aria-hidden="true">20.</strong> sloth_eat/3</a></li><li class="chapter-item expanded "><a href="../../../../src/lib/Sloth/sloth.odin.d/sloth_eat_food-949942c18.html"><strong aria-hidden="true">21.</strong> sloth_eat_food/3</a></li><li class="chapter-item expanded "><a href="../../../../src/lib/Sloth/sloth.odin.d/sloth_eat_default_food-95c5c58aa.html"><strong aria-hidden="true">22.</strong> sloth_eat_default_food/3</a></li><li class="chapter-item expanded "><a href="../../../../src/lib/Sloth/sloth.odin.d/sloth_sleep-a454e1238.html"><strong aria-hidden="true">23.</strong> sloth_sleep/3</a></li><li class="chapter-item expanded "><a href="../../../../src/lib/Sloth/sloth.odin.d/sloth_perform-c388865f.html"><strong aria-hidden="true">24.</strong> sloth_perform/3</a></li><li class="chapter-item expanded affix "><li class="spacer"></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">SlothCreator</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="git@github.com:odin-arsenal/gungnir.git" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <div class="page-header">
+<span class="role-heading">
+<p><strong>Enumeration</strong></p>
+</span>
+<span class="page-title">
+<h1 id="slothfoodenum"><a class="header" href="#slothfoodenum"><code>SlothFoodEnum</code></a></h1>
+</span>
+<span class="page-description">
+<p>Default Sloth Food Enum.</p>
+</span>
+</div>
+<h2 id="declaration"><a class="header" href="#declaration">Declaration</a></h2>
+<pre><code class="language-odin">SlothFoodEnum :: enum
+</code></pre>
+<hr />
+<h2 id="values"><a class="header" href="#values">Values</a></h2>
+<h3 id="green"><a class="header" href="#green">Green</a></h3>
+<p>A spindly stick.</p>
+<h4 id="declaration-1"><a class="header" href="#declaration-1">Declaration</a></h4>
+<pre><code class="language-odin">Twig
+</code></pre>
+<h3 id="twig"><a class="header" href="#twig">Twig</a></h3>
+<p>A regular-sized leaf.</p>
+<h4 id="declaration-2"><a class="header" href="#declaration-2">Declaration</a></h4>
+<pre><code class="language-odin">Twig
+</code></pre>
+<h3 id="regular_leaf"><a class="header" href="#regular_leaf">Regular_Leaf</a></h3>
+<p>A regular-sized leaf.</p>
+<h4 id="declaration-3"><a class="header" href="#declaration-3">Declaration</a></h4>
+<pre><code class="language-odin">Regular_Leaf
+</code></pre>
+<h3 id="large_leaf"><a class="header" href="#large_leaf">Large_Leaf</a></h3>
+<p>A large leaf.</p>
+<h4 id="declaration-4"><a class="header" href="#declaration-4">Declaration</a></h4>
+<pre><code class="language-odin">Large_Leaf
+</code></pre>
+<hr />
+<h2 id="see-also"><a class="header" href="#see-also">See Also</a></h2>
+<ul>
+<li><a href="food.html">food</a></li>
+<li><a href="init_food-04e4b06c0.html">init_food/2</a></li>
+<li><a href="slothfood.html">slothfood</a></li>
+<li><a href="slothfoodenum.html">slothfoodenum</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../../../src/lib/Sloth/activity.odin.d/speed.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../../../src/lib/Sloth/food.odin.d/food.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../../../src/lib/Sloth/activity.odin.d/speed.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../../../src/lib/Sloth/food.odin.d/food.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../../../elasticlunr.min.js"></script>
+        <script src="../../../../mark.min.js"></script>
+        <script src="../../../../searcher.js"></script>
+
+        <script src="../../../../clipboard.min.js"></script>
+        <script src="../../../../highlight.js"></script>
+        <script src="../../../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
