@@ -7,13 +7,13 @@ package Sloth_Generators
 import "core:math/rand"
 import "../Sloth"
 
-/// A type that generates food.
+/// A procedure that generates food.
 ///
 /// ## Topics
 ///
 /// ### Generating Food
 ///
-/// - ``generate_food(:)``
+/// - ``generate_food/n``
 generate_food :: proc{
     generate_food_from_habitat,
     generate_random_food,

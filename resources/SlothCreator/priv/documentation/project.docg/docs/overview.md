@@ -10,6 +10,8 @@
 
 Catalog sloths you find in nature and create new adorable virtual sloths.
 
+<img src="resources/slothCreator-icon@2x.png" alt="A technology icon representing the SlothCreator project" style="width:50%;height:auto;">
+
 </div>
 
 ## Overview

@@ -52,7 +52,7 @@
 
 - [🅿 init_sloth/3](sloth.odin.d/init_sloth-d710023bf.md)
 
-- [🅿 sloth_eat/3](sloth.odin.d/sloth_eat-3e351e1ca.md)
+- [🅿 sloth_eat/n](sloth.odin.d/sloth_eat-3e351e1ca.md)
 
 - [🅿 sloth_eat_food/3](sloth.odin.d/sloth_eat_food-949942c18.md)
 

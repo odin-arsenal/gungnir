@@ -8,8 +8,6 @@ import "core:math/rand"
 
 import "../Sloth"
 
-/// A type that generates sloths.
-
 /// Generates a sloth in the specified habitat.
 generate_sloth :: proc(habitat: Sloth.Habitat) -> (sloth: Sloth.Sloth, ok: bool) #optional_ok {
     sloth = Sloth.init_sloth(generate_name(rand.int_max(2)))

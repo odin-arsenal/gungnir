@@ -19,7 +19,7 @@
 <!-- Gungnir Will Append After the last line of SUMMARY.md -->
 ---
 
-# Package: Sloth <!-- Renamed in docg.ini -->
+# Package: Sloth
 
 - [Overview](src/lib/Sloth/overview.md)
 
@@ -63,4 +63,22 @@
 - [sloth_sleep/3](src/lib/Sloth/sloth.odin.d/sloth_sleep-a454e1238.md)
 
 - [sloth_perform/3](src/lib/Sloth/sloth.odin.d/sloth_perform-c388865f.md)
+---
+
+# Package: Generators
+
+- [Overview](src/lib/Generators/overview.md)
+
+# Procedures
+
+- [generate_food/n](src/lib/Generators/food_generator.odin.d/generate_food.md)
+
+- [generate_food_from_habitat/1](src/lib/Generators/food_generator.odin.d/generate_food_from_habitat.md)
+
+- [generate_random_food/0](src/lib/Generators/food_generator.odin.d/generate_random_food.md)
+
+- [generate_name/1](src/lib/Generators/name_generator.odin.d/generate_name.md)
+
+- [generate_sloth/1](src/lib/Generators/sloth_generator.odin.d/generate_sloth.md)
+
 ---
