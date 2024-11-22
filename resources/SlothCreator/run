@@ -16,6 +16,7 @@ function md.publish {
     md.build
     pushd .
     cd ../../
+    rm -rf docs/SlothCreator
     cp -R resources/SlothCreator/priv/documentation/project.docg/book docs/SlothCreator
     popd
 }
