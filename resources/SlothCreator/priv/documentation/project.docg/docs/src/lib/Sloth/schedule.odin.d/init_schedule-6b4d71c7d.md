@@ -32,5 +32,6 @@ init_schedule :: proc(events: map[int]Event) -> Schedule
 --- 
 ## See Also
 
-- [Sloth](../overview.md)
-- [Speed](../activity.odin.d/speed.md)
+- [event](event.md)
+- [init_schedule/1](init_schedule-6b4d71c7d.md)
+- [schedule](schedule.md)
