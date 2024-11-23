@@ -26,3 +26,5 @@ They must be copied at the same level of overview.md or in a specific path.
 <!-- Gungnir Will automatically append menu items after this separator -->
 <!-- Use extensions to overwrite menu titles -->
 ---
+
+{{PROJECT.SUMMARY}}

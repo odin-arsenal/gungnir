@@ -1,6 +1,6 @@
-<section class="page-header">
+<section id="page-header-project-{{PROJECT.PATH}}" class="page-header page-header-project">
 
-<div class="role-heading">
+<div class="page-role page-role-project">
 
 **Project**
 
@@ -10,9 +10,14 @@
 
 # ``{{PROJECT.TITLE}}``
 
+</div>
+
+<div class="page-description">
+
 {{PROJECT.DESCRIPTION}}
 
 </div>
+
 </section>
 
 <!-- Include a brief description of the project
