@@ -5,7 +5,7 @@
 # Sloth Creator
 
 <!-- Automatically copied from base project directory to priv/documentation/project.docg/docs/src/ -->
-- [About](src/README.md) 
+- [About](src/README.md)
 
 <!-- Overview.md file must be manually generated -->
 - [Overview](Overview.md)
@@ -23,9 +23,13 @@
 
 - [Overview](src/lib/Sloth/overview.md)
 
+# Files
+
+- [activity.odin](src/lib/Sloth/activity.odin.d/overview.md)
+- [food.odin](src/lib/Sloth/food.odin.d/overview.md)
+
 # Enums
 
-- [Event](src/lib/Sloth/schedule.odin.d/schedule.md)
 - [Color](src/lib/Sloth/color.odin.d/color.md)
 - [Power](src/lib/Sloth/power.odin.d/power.md)
 - [Speed](src/lib/Sloth/activity.odin.d/speed.md)
@@ -33,6 +37,7 @@
 
 # Structs
 
+- [Event](src/lib/Sloth/schedule.odin.d/schedule.md)
 - [Food](src/lib/Sloth/food.odin.d/food.md)
 - [Habitat](src/lib/Sloth/habitat.odin.d/habitat.md)
 - [Schedule](src/lib/Sloth/schedule.odin.d/schedule.md)

@@ -1,6 +1,0 @@
-[book]
-authors = ["My Project"]
-language = "en"
-multilingual = false
-src = "src"
-title = "Project Documentation"

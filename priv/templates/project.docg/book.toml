@@ -1,0 +1,17 @@
+[book]
+authors = [{{PROJECT.AUTHORS}}]
+title = "{{PROJECT.TITLE}}"
+description = "{{PROJECT.DESCRIPTION}}"
+language = "en"
+multilingual = false
+src = "./docs"
+
+[output.html]
+smart-punctuation = true
+mathjax-support = false
+site-url = "{{PROJECT.URL}}"
+additional-css = ["./theme/styles/theme.min.css"]
+git-repository-url = "{{PROJECT.GIT.URL}}"
+
+[output.html.code.hidelines]
+odin = "~"
